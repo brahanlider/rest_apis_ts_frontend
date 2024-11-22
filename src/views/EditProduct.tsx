@@ -8,10 +8,7 @@ import {
   useLoaderData,
 } from "react-router-dom";
 import ErrorMessage from "../components/ErrorMessage";
-import {
-  getProductsByID,
-  updateProduct,
-} from "../services/ProductService";
+import { getProductsByID, updateProduct } from "../services/ProductService";
 import { Product } from "../types";
 import ProductForm from "../components/ProductForm";
 
@@ -25,8 +22,6 @@ export async function loader({ params }: LoaderFunctionArgs) {
     }
     return product;
   }
-
-  return {};
 }
 
 export async function action({ request, params }: ActionFunctionArgs) {
@@ -71,14 +66,8 @@ export default function EditProduct() {
         </Link>
       </div>
       {error && <ErrorMessage>{error}</ErrorMessage>}
-      <Form className="mt-10"
-        method="POST"
-        action=""
-        >
-        
-        <ProductForm  
-        product={product}
-        />
+      <Form className="mt-10" method="POST" action="">
+        <ProductForm product={product} />
 
         <div className="mb-4">
           <label className="text-gray-800" htmlFor="availability">
