@@ -1,0 +1,10 @@
+
+INSTALLAR 
+
+tailwindcss
+npm i react-router-dom
+npm i valibot
+npm i axios
+
+
+------------
