@@ -9,7 +9,6 @@ import {
 } from "react-router-dom";
 import ErrorMessage from "../components/ErrorMessage";
 import {
-  addProduct,
   getProductsByID,
   updateProduct,
 } from "../services/ProductService";
@@ -44,7 +43,6 @@ export async function action({ request, params }: ActionFunctionArgs) {
   // console.log(params.id)
   if (params.id !== undefined) {
     await updateProduct(data, +params.id);
-    // await addProduct(data);
     return redirect("/");
   }
 }
